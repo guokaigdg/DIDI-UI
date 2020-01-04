@@ -1,0 +1,69 @@
+{
+  "name": "solidoc-ase-component-lib",
+  "version": "1.1.5",
+  "description": "button",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "files": [
+    "css",
+    "es",
+    "lib",
+    "umd",
+    "public"
+  ],
+  "scripts": {
+    "build": "nwb build-react-component --copy-files",
+    "clean": "nwb clean-module && nwb clean-demo",
+    "prepublishOnly": "npm run build",
+    "start": "nwb serve-react-demo",
+    "test": "nwb test-react",
+    "test:coverage": "nwb test-react --coverage",
+    "test:watch": "nwb test-react --server",
+    "postcss": "postcss *.css --use autoprefixer -d es/",
+    "release": "standard-version",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.8.2",
+    "@material-ui/icons": "^4.5.1",
+    "@material-ui/styles": "^4.8.2",
+    "axios": "^0.19.0",
+    "html2canvas": "^1.0.0-rc.5",
+    "material-design-icons": "^3.0.1",
+    "material-design-icons-iconfont": "^5.0.1",
+    "prop-types": "^15.7.2",
+    "react-router-dom": "^5.1.2",
+    "standard-version": "^7.0.1",
+    "styled-components": "^4.4.1",
+    "typeface-roboto": "0.0.75",
+    "uuid": "^3.3.3",
+    "zangodb": "^1.0.7"
+  },
+  "peerDependencies": {
+    "react": "16.x"
+  },
+  "devDependencies": {
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "classnames": "^2.2.6",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.0.2",
+    "nwb": "0.23.x",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "author": "ma_meng",
+  "homepage": "./",
+  "license": "MIT",
+  "keywords": [
+    "react-component"
+  ],
+  "directories": {
+    "test": "tests"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "proxy": "http://localhost:3000"
+}

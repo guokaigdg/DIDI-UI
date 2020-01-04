@@ -1,0 +1,14 @@
+#links {
+  display: flex;
+  /* justify-content: first baseline; */
+  align-items: center;
+}
+#links a {
+  margin: 3%;
+}
+
+.div {
+  display: flex;
+  /* justify-content: first baseline; */
+  align-items: center;
+}
