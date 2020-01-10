@@ -41,7 +41,8 @@ const useStyles = makeStyles({
     borderRadius: 2.5,
     cursor: "pointer",
     "&:hover": {
-      backgroundColor: "#F7F6F3",
+      // backgroundColor: "#F7F6F3",
+      backgroundColor: "#474C50FF",
       cursor: "pointer"
     },
     "&:active": {

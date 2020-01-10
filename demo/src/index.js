@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import ReactDOM from "react-dom";
 import { makeStyles } from "@material-ui/styles";
 import {
@@ -7,12 +7,19 @@ import {
   SidebarSwitch,
   StickyBlockBox,
   SplitLine,
-  LyoutContainerTB8px,
-  LyoutContainerB6px
+  LayoutContainerTB8px,
+  ChangeIconMenu
 } from "../../src/index";
+import Checkbox from "@material-ui/core/Checkbox";
+// import Switch from "@material-ui/core/Switch";
 import { BrowserRouter as Router, Switch } from "react-router-dom";
 import List from "./List";
 import Show from "./Show";
+import Demo22 from "./components/Demo22";
+import Loop from "./components/loop";
+import Grid_ from "./components/Grid_";
+import Prism from "./components/Prism.js";
+import { Grid } from "@material-ui/core";
 
 /* ---------------------------------------------
 /*        |    breadcrumb 面包屑                |
@@ -245,9 +252,21 @@ function Demo() {
         <div className={classes.sidebarSwitch}>
           <SidebarSwitch />
         </div>
-        <LyoutContainerTB8px>
+        <LayoutContainerTB8px>
           <SplitLine />
-        </LyoutContainerTB8px>
+        </LayoutContainerTB8px>
+        <div>
+          <Checkbox
+            checked
+            // value="明天去小米之家"
+            value="checkedB"
+            color="primary"
+          />
+        </div>
+        <LayoutContainerTB8px>
+          <SplitLine />
+        </LayoutContainerTB8px>
+
         <div className="diplay">
           <Display
             disPlayList={[
@@ -258,9 +277,9 @@ function Demo() {
               }
             ]}
           />
-          <LyoutContainerTB8px>
+          <LayoutContainerTB8px>
             <SplitLine />
-          </LyoutContainerTB8px>
+          </LayoutContainerTB8px>
           <Display disPlayList={disPlayList} />
         </div>
       </div>
@@ -278,9 +297,9 @@ function Demo() {
         <div></div>
       </div>
       <div className={classes.right}>
-        <LyoutContainerTB8px>
+        <LayoutContainerTB8px>
           <SplitLine />
-        </LyoutContainerTB8px>
+        </LayoutContainerTB8px>
         {/* 锚点导航 */}
         <div className={classes.stickyBlockbox}>
           <Display
@@ -310,9 +329,9 @@ function Demo() {
               }
             ]}
           />
-          <LyoutContainerTB8px>
+          <LayoutContainerTB8px>
             <SplitLine />
-          </LyoutContainerTB8px>
+          </LayoutContainerTB8px>
           <Router>
             <StickyBlockBox list={stickyBlockBoxList} />
             <div
@@ -335,5 +354,11 @@ function Demo() {
     </div>
   );
 }
-
-ReactDOM.render(<Demo />, document.querySelector("#demo"));
+function Demo2() {
+  return (
+    <div>
+      <ChangeIconMenu />
+    </div>
+  );
+}
+ReactDOM.render(<Demo2 />, document.querySelector("#demo"));
