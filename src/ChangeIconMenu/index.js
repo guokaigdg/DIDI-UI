@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { BrowserRouter as Router, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import { SplitLine, LayoutContainerTB6px } from "../index";
 import ChangeIconMenuRoute from "./ChangeIconMenuRoute";
