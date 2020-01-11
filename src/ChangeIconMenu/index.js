@@ -37,19 +37,29 @@ function ChangeIconMenu() {
           <div className={classes.contentWrap}>
             <ChangeIconMenuLink
               clickButton1={() => {
-                console.log("ok1");
+                alert("点击了随机");
               }}
               clickButton2={() => {
-                console.log("ok2");
+                alert("点击了移除");
               }}
             />
             <SplitLine />
-            <ChangeIconMenuRoute />
+            <ChangeIconMenuRoute
+              chooseImage={() => {
+                alert("你选择了一个图片");
+              }}
+            />
           </div>
         </Router>
       </LayoutContainerTB6px>
     </div>
   );
 }
+
+//传入emoji
+//出入随机事件
+//传入移除事件
+//传入选择了摸个emoji事件
+//出传入上传照片事件
 
 export default ChangeIconMenu;

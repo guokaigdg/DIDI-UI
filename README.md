@@ -23,20 +23,16 @@ cnpm i DIDI-UI
 - 引入样式
 
 ```js
-import { Button } from "DIDI-UI";
+import { SidebarSwitch } from "DIDI-UI";
 ```
 
 #### 🌰 例子
 
 ```js
-<Button
-  onClick={() => {
-    this.handleClick();
-  }} //onClick
-  disabled={false} //disabled
->
-  登陆
-</Button>
+<SidebarSwitch
+  icon="🍉",
+  title={"工作区"}
+/>
 ```
 
 [build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
@@ -45,7 +41,3 @@ import { Button } from "DIDI-UI";
 [npm]: https://www.npmjs.org/package/npm-package
 [coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
 [coveralls]: https://coveralls.io/github/user/repo
-
-#### 📔API 文档
-
-https://www.notion.so/guookai/solidoc-ase-component-lib-2222a3768b08408286397b96f7bf15fd

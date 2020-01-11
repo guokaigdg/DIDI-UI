@@ -8,9 +8,8 @@ const useStyles = makeStyles({
   viewWrap: {
     display: "flex",
     flexDirection: "column",
-    // alignItems: "center",
     width: 400,
-    height: 231,
+    height: 288,
     marginLeft: 22,
     marginTop: 21
     // marginBottom: 51,
@@ -62,8 +61,8 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     // justifyContent: "space-between",
-    width: 408,
-    height: 64,
+    width: 417,
+    height: 147,
     marginTop: 21
     // backgroundColor: "red"
   },
@@ -101,8 +100,34 @@ const useStyles = makeStyles({
     display: "flex",
     alignItems: "center",
     flexWrap: "wrap",
-    height: 67
-    // backgroundColor: "green"
+    height: 120,
+    overflow: "auto",
+    // backgroundColor: "green",
+    "&::-webkit-scrollbar": {
+      width: 6
+    },
+    "&::-webkit-scrollbar-thumb": {
+      backgroundColor: "rgba(184,186,186,1)",
+      borderRadius: 2
+    }
+  },
+  uploadImage: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    width: 300,
+    height: 30,
+    marginLeft: 50,
+    marginTop: 25,
+    background: "rgba(0,158,202,1)",
+    borderRadius: 5,
+    cursor: "pointer"
+    // border: "1px solid rgba(32,32,34,1)"
+  },
+  uploadImageFont: {
+    fontSize: 14,
+    fontWeight: 500,
+    color: "#E7E8E8FF"
   }
 });
 
@@ -126,11 +151,13 @@ function EmojiIcon() {
             🍉
           </span>
           <span className={classes.emojiIcon}> 👽</span>
-
           <span className={classes.emojiIcon}> 🍓</span>
           <span className={classes.emojiIcon}> 🍟</span>
           <span className={classes.emojiIcon}> 🍔 </span>
           <span className={classes.emojiIcon}> 🍥</span>
+          <span className={classes.emojiIcon}> 📲</span>
+          <span className={classes.emojiIcon}> 🇨🇳</span>
+          <span className={classes.emojiIcon}> 🇺🇸</span>
         </div>
       </div>
       <div className={classes.emojiPackage}>
@@ -151,7 +178,6 @@ function EmojiIcon() {
           <span className={classes.emojiIcon}> 🦊</span>
           <span className={classes.emojiIcon}> 😂</span>
           <span className={classes.emojiIcon}> 🤖</span>
-          {/* <span className={classes.emojiIcon}> 🇺🇸</span> */}
           <span className={classes.emojiIcon}> 👑</span>
           <span className={classes.emojiIcon}> 🙏🏻</span>
           <span className={classes.emojiIcon}> 🍓</span>
@@ -161,19 +187,79 @@ function EmojiIcon() {
           <span className={classes.emojiIcon}> 🙏🏻</span>
           <span className={classes.emojiIcon}> 🇨🇳</span>
           <span className={classes.emojiIcon}> 🇺🇸</span>
+          <span className={classes.emojiIcon}> 🚀</span>
+          <span className={classes.emojiIcon}> 🚀</span>
+          <span className={classes.emojiIcon}> 🚀</span>
+          <span className={classes.emojiIcon}> 🐰</span>
+          <span className={classes.emojiIcon}> 🦊</span>
+          <span className={classes.emojiIcon}> 😂</span>
+          <span className={classes.emojiIcon}> 🤖</span>
+          <span className={classes.emojiIcon}> 👑</span>
+          <span className={classes.emojiIcon}> 🙏🏻</span>
+          <span className={classes.emojiIcon}> 🍓</span>
+          <span className={classes.emojiIcon}> 🚌</span>
+          <span className={classes.emojiIcon}> 📲</span>
+          <span className={classes.emojiIcon}> 🚀</span>
+          <span className={classes.emojiIcon}> 🚀</span>
+          <span className={classes.emojiIcon}> 🚀</span>
+          <span className={classes.emojiIcon}> 🐰</span>
+          <span className={classes.emojiIcon}> 🦊</span>
+          <span className={classes.emojiIcon}> 😂</span>
+          <span className={classes.emojiIcon}> 🤖</span>
+          <span className={classes.emojiIcon}> 🙏🏻</span>
+          <span className={classes.emojiIcon}> 🍓</span>
+          <span className={classes.emojiIcon}> 🚌</span>
+          <span className={classes.emojiIcon}> 📲</span>
+          <span className={classes.emojiIcon}> 🚀</span>
+          <span className={classes.emojiIcon}> 👑</span>
+          <span className={classes.emojiIcon}> 🙏🏻</span>
+          <span className={classes.emojiIcon}> 🍓</span>
+          <span className={classes.emojiIcon}> 🚌</span>
+          <span className={classes.emojiIcon}> 📲</span>
+          <span className={classes.emojiIcon}> 😂</span>
+          <span className={classes.emojiIcon}> 🤖</span>
+          <span className={classes.emojiIcon}> 👑</span>
+          <span className={classes.emojiIcon}> 🙏🏻</span>
+          <span className={classes.emojiIcon}> 🍓</span>
+          <span className={classes.emojiIcon}> 🚌</span>
+          <span className={classes.emojiIcon}> 📲</span>
+          <span className={classes.emojiIcon}> 🚀</span>
+          <span className={classes.emojiIcon}> 🚀</span>
+          <span className={classes.emojiIcon}> 🚀</span>
+          <span className={classes.emojiIcon}> 🐰</span>
+          <span className={classes.emojiIcon}> 🦊</span>
+          <span className={classes.emojiIcon}> 😂</span>
+          <span className={classes.emojiIcon}> 🤖</span>
+          <span className={classes.emojiIcon}> 🙏🏻</span>
+          <span className={classes.emojiIcon}> 🍓</span>
+          <span className={classes.emojiIcon}> 🚌</span>
+          <span className={classes.emojiIcon}> 📲</span>
+          <span className={classes.emojiIcon}> 🚀</span>
+          <span className={classes.emojiIcon}> 👑</span>
+          <span className={classes.emojiIcon}> 🙏🏻</span>
+          <span className={classes.emojiIcon}> 🍓</span>
+          <span className={classes.emojiIcon}> 🚌</span>
+          <span className={classes.emojiIcon}> 📲</span>
         </div>
       </div>
     </div>
   );
 }
-function ImageIcon() {
+function UploadImage(props) {
+  const { onClickUploadImage } = props;
+  const classes = useStyles();
   return (
-    <div>
-      <span>图片</span>
+    <div className={classes.viewWrap}>
+      <div className={classes.uploadImage}>
+        <span className={classes.uploadImageFont} onClick={onClickUploadImage}>
+          选择一个图片
+        </span>
+      </div>
     </div>
   );
 }
-function ChangeIconMenuRoute() {
+function ChangeIconMenuRoute(props) {
+  const { chooseImage } = props;
   const classes = useStyles();
   return (
     <div>
@@ -182,7 +268,7 @@ function ChangeIconMenuRoute() {
           <EmojiIcon />
         </Route>
         <Route exact path="/image">
-          <ImageIcon />
+          <UploadImage onClickUploadImage={chooseImage} />
         </Route>
       </Switch>
     </div>

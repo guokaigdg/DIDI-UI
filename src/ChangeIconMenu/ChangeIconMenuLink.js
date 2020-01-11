@@ -99,11 +99,11 @@ function ChangeIconMenuLink(props) {
         {pathname === "/image" && <span className={classes.imageHint} />}
       </div>
       <div className={classes.buttonLeft} onClick={clickButton1}>
-        按钮
+        随机
       </div>
 
       <div className={classes.buttonRight} onClick={clickButton2}>
-        按钮
+        移除
       </div>
     </div>
   );
