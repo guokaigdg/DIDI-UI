@@ -35,6 +35,7 @@
     "material-design-icons-iconfont": "^5.0.1",
     "prismjs": "^1.18.0",
     "prop-types": "^15.7.2",
+    "react-emojione": "^5.0.1",
     "react-router-dom": "^5.1.2",
     "standard-version": "^7.0.1",
     "styled-components": "^4.4.1",
