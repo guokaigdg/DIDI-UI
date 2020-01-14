@@ -15,4 +15,4 @@ function LayoutContainerTB8px(props) {
   const classes = useStyle();
   return <div className={classes.line}>{children}</div>;
 }
-export default LayoutContainerTB8px;
+export { LayoutContainerTB8px };

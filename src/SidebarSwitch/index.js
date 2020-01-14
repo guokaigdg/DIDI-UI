@@ -30,4 +30,4 @@ SidebarSwitchWrap.defaultProps = {
     console.log("ok");
   }
 };
-export default SidebarSwitchWrap;
+export { SidebarSwitchWrap };

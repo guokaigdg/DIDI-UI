@@ -12,4 +12,4 @@ function SplitLine() {
   const classes = useStyle();
   return <div className={classes.line} />;
 }
-export default SplitLine;
+export { SplitLine };

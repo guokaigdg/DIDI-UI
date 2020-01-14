@@ -19,4 +19,4 @@ function BreadcrumbWrap(props) {
   );
 }
 
-export default BreadcrumbWrap;
+export { BreadcrumbWrap };

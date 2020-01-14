@@ -27,4 +27,4 @@ StickyBlockBoxWrap.defaultProps = {
     }
   ]
 };
-export default StickyBlockBoxWrap;
+export { StickyBlockBoxWrap };

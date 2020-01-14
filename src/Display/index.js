@@ -28,4 +28,4 @@ DisplayWrap.defaultProps = {
     console.log("ok");
   }
 };
-export default DisplayWrap;
+export { DisplayWrap };
