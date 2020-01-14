@@ -108,4 +108,4 @@ function ChangeIconMenuLink(props) {
     </div>
   );
 }
-export default ChangeIconMenuLink;
+export { ChangeIconMenuLink };

@@ -75,9 +75,7 @@ const useStyles = makeStyles({
   recentEmoji: {
     display: "flex",
     flexDirection: "column",
-    // justifyContent: "space-between",
     width: 400,
-    // height: 65,
     marginTop: 23,
     marginBottom: 14
     // backgroundColor: "blue"
@@ -100,14 +98,19 @@ const useStyles = makeStyles({
   },
   recentIconWrap: {
     display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "flex-start",
     alignItems: "center",
+    flexWrap: "wrap",
     width: 417,
     // height: 30,
     marginTop: 17
-    // marginBottom: 17,
     // backgroundColor: "blue"
+  },
+  emojiIconWrap: {
+    display: "flex",
+    alignItems: "center",
+    flexWrap: "wrap",
+    // backgroundColor: "pink",
+    marginTop: 9
   },
   emojiIcon: {
     display: "flex",
@@ -121,13 +124,7 @@ const useStyles = makeStyles({
     cursor: "pointer"
     // backgroundColor: "red"
   },
-  emojiIconWrap: {
-    display: "flex",
-    alignItems: "center",
-    flexWrap: "wrap",
-    // backgroundColor: "pink",
-    marginTop: 9
-  },
+
   uploadImage: {
     display: "flex",
     alignItems: "center",
@@ -150,28 +147,46 @@ const useStyles = makeStyles({
 
 function EmojiIcon(props) {
   const { onClickEmoji } = props;
-  // const people = data[0].categories[0].emojis;
-  // const nature = data[0].categories[1].emojis;
-  // const food = data[0].categories[2].emojis;
-  // const activity = data[0].categories[3].emojis;
-  // const places = data[0].categories[4].emojis;
-  // const objects = data[0].categories[5].emojis;
-  // const symbols = data[0].categories[6].emojis;
-  // const flags = data[0].categories[7].emojis;
-  useEffect(() => {
-    // console.log(data[0].categories[0].emojis);
-    // console.log(data);
-  });
   const [value, setValue] = useState("");
+  const [recentList, setRecentList] = useState([
+    "grinning",
+    "grin",
+    "joy",
+    "smiley"
+  ]);
+  useEffect(() => {
+    // setRecentList(["grinning", "grin", "joy", "smiley"]);
+  });
   const handleValue = e => {
     setValue(e.target.value);
   };
   const handleClearValue = () => {
     setValue("");
   };
-  // const handleOnClickEmoji = () => {
-  //   onClickEmoji("ccc");
-  // };
+  //更新常用emoji列表
+  const updateRecentList = newEmoji => {
+    for (let i = 0; i <= recentList.length; i++) {
+      if (newEmoji === recentList[i]) {
+        //删除原来的的然后新加
+        recentList.splice(i, 1);
+        setRecentList([newEmoji, ...recentList]);
+      } else {
+        if (recentList.length <= 19) {
+          setRecentList([newEmoji, ...recentList]);
+        } else {
+          recentList.pop();
+          setRecentList([newEmoji, ...recentList]);
+        }
+      }
+    }
+    console.log(recentList);
+  };
+  const handleOnClickEmoji = result => {
+    updateRecentList(result);
+
+    onClickEmoji(result);
+  };
+
   const classes = useStyles();
   return (
     <div className={classes.viewWrap}>
@@ -194,26 +209,17 @@ function EmojiIcon(props) {
           <div className={classes.recentEmoji}>
             <span className={classes.title}>最近</span>
             <div className={classes.recentIconWrap}>
-              <span
-                className={classes.emojiIcon}
-                onClick={() => {
-                  alert("你选择了一个emoji");
-                }}
-              >
-                🍉
-              </span>
-              <span className={classes.emojiIcon}> 👽</span>
-              <span className={classes.emojiIcon}> 🍓</span>
-              <span className={classes.emojiIcon}> 🍟</span>
-              <span className={classes.emojiIcon}> 🍔 </span>
-              <span className={classes.emojiIcon}> 🍥</span>
-              <span className={classes.emojiIcon}> 📲</span>
-              <span className={classes.emojiIcon}> 🇨🇳</span>
-              <span className={classes.emojiIcon}> 🇺🇸</span>
-              <span className={classes.emojiIcon}> 📲</span>
-              <span className={classes.emojiIcon}> 🇨🇳</span>
-              <span className={classes.emojiIcon}> 🇺🇸</span>
-              <span className={classes.emojiIcon}> 🇺🇸</span>
+              {recentList.map((item, index) => (
+                <div
+                  className={classes.emojiIcon}
+                  key={index + item}
+                  onClick={() => {
+                    handleOnClickEmoji(item);
+                  }}
+                >
+                  <Emoji emoji={item} size={28} />
+                </div>
+              ))}
             </div>
           </div>
         )}
@@ -228,19 +234,10 @@ function EmojiIcon(props) {
                       className={classes.emojiIcon}
                       key={index + item}
                       onClick={() => {
-                        onClickEmoji(
-                          data[0].categories[indexType].emojis[index]
-                        );
+                        handleOnClickEmoji(item);
                       }}
-                      // alert(data[0].categories[indexType].emojis[index]);
                     >
-                      <Emoji
-                        // onClick={emoji => {
-                        //   console.log(JSON.stringify(emoji));
-                        // }}
-                        emoji={item}
-                        size={28}
-                      />
+                      <Emoji emoji={item} size={28} />
                     </div>
                   ))}
                 </div>
@@ -282,4 +279,4 @@ function ChangeIconMenuRoute(props) {
     </div>
   );
 }
-export default ChangeIconMenuRoute;
+export { ChangeIconMenuRoute };

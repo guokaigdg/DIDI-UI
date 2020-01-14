@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import { SplitLine, LayoutContainerTB6px } from "../index";
-import ChangeIconMenuRoute from "./ChangeIconMenuRoute";
-import ChangeIconMenuLink from "./ChangeIconMenuLink";
+import { ChangeIconMenuRoute } from "./ChangeIconMenuRoute";
+import { ChangeIconMenuLink } from "./ChangeIconMenuLink";
 import { Emoji } from "emoji-mart";
 // import "emoji-mart/css/emoji-mart.css";
 
@@ -30,20 +30,24 @@ function ChangeIconMenu() {
   const classes = useStyles();
   const [emojiIcon, setEmojiIcon] = useState("");
   useEffect(() => {
-    console.log("🙆‍♂️");
+    // console.log("🙆‍♂️");
   });
 
-  const handleClickEmoji = re => {
-    setEmojiIcon(re);
-    console.log(re);
+  const handleClickEmoji = result => {
+    setEmojiIcon(result);
+    console.log(result);
   };
 
+  const handleClearemoji = () => {
+    setEmojiIcon(" ");
+  };
   return (
     <div>
-      {" "}
       <div>
         结果:
-        <Emoji emoji={emojiIcon} size={28} />
+        <div style={{ width: 100, height: 40 }}>
+          <Emoji emoji={emojiIcon} size={28} />
+        </div>
         名字:{emojiIcon}
       </div>
       <div className={classes.Wrap}>
@@ -54,9 +58,7 @@ function ChangeIconMenu() {
                 clickButton1={() => {
                   alert("点击了随机");
                 }}
-                clickButton2={() => {
-                  alert("点击了移除");
-                }}
+                clickButton2={handleClearemoji}
               />
               <SplitLine />
               <ChangeIconMenuRoute
