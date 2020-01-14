@@ -5,7 +5,7 @@ import Icon from "@material-ui/core/Icon";
 import { makeStyles } from "@material-ui/core/styles";
 import "emoji-mart/css/emoji-mart.css";
 import { Emoji } from "emoji-mart";
-import data from "./messenger";
+import data from "./data";
 // import data from "../../public/apple";
 
 const useStyles = makeStyles({

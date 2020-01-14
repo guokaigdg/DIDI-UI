@@ -5,7 +5,7 @@ import { SplitLine, LayoutContainerTB6px } from "../index";
 import { ChangeIconMenuRoute } from "./ChangeIconMenuRoute";
 import { ChangeIconMenuLink } from "./ChangeIconMenuLink";
 import { Emoji } from "emoji-mart";
-// import "emoji-mart/css/emoji-mart.css";
+import data from "./data";
 
 const useStyles = makeStyles({
   Wrap: {
@@ -37,7 +37,15 @@ function ChangeIconMenu() {
     setEmojiIcon(result);
     console.log(result);
   };
-
+  const handleRandomemoji = () => {
+    const count = [217, 82, 62, 40, 153, 118, 167, 258];
+    let randomType = parseInt(Math.random() * 8);
+    let randomIcon = parseInt(Math.random() * (count[randomType] + 1));
+    let randomResult = data[0].categories[randomType].emojis[randomIcon];
+    console.log(randomType);
+    console.log(randomIcon);
+    setEmojiIcon(randomResult);
+  };
   const handleClearemoji = () => {
     setEmojiIcon(" ");
   };
@@ -55,9 +63,7 @@ function ChangeIconMenu() {
           <Router>
             <div className={classes.contentWrap}>
               <ChangeIconMenuLink
-                clickButton1={() => {
-                  alert("点击了随机");
-                }}
+                clickButton1={handleRandomemoji}
                 clickButton2={handleClearemoji}
               />
               <SplitLine />
@@ -81,4 +87,4 @@ function ChangeIconMenu() {
 //传入选择了摸个emoji事件
 //出传入上传照片事件
 
-export default ChangeIconMenu;
+export { ChangeIconMenu };
