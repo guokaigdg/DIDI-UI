@@ -15,11 +15,6 @@ import Checkbox from "@material-ui/core/Checkbox";
 import { BrowserRouter as Router, Switch } from "react-router-dom";
 import List from "./List";
 import Show from "./Show";
-import Demo22 from "./components/Demo22";
-import Loop from "./components/loop";
-import Grid_ from "./components/Grid_";
-import Prism from "./components/Prism.js";
-import { Grid } from "@material-ui/core";
 
 /* ---------------------------------------------
 /*        |    breadcrumb 面包屑                |
@@ -283,8 +278,8 @@ function Demo() {
           <Display disPlayList={disPlayList} />
         </div>
       </div>
+      {/* ---------------breadcrumb 面包屑---------------------- */}
       <div className={classes.mid}>
-        {/* breadcrumb 面包屑 */}
         <div className={classes.breadcrumb}>
           <Router>
             <Breadcrumb upDateList={upDateList} />
@@ -293,6 +288,9 @@ function Demo() {
             </Switch>
             {/* <Show /> */}
           </Router>
+          <div style={{ zIndex: 1 }}>
+            <ChangeIconMenu />
+          </div>
         </div>
         <div></div>
       </div>
