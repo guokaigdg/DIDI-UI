@@ -1,11 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import { SplitLine, LayoutContainerTB6px } from "../index";
 import { ChangeIconMenuRoute } from "./ChangeIconMenuRoute";
 import { ChangeIconMenuLink } from "./ChangeIconMenuLink";
 import { Emoji } from "emoji-mart";
+import PropTypes from "prop-types";
 import data from "./data";
+
+/**
+ * Display
+ * @param {chooseImage}  上传照片方法
+ * @param {onChooseEmoji}  上传emoji方法
+ * @returns
+ */
 
 const useStyles = makeStyles({
   Wrap: {
@@ -26,24 +34,20 @@ const useStyles = makeStyles({
     backgroundColor: "green"
   }
 });
-function ChangeIconMenu() {
+function ChangeIconMenu(props) {
+  const { onChooseEmoji, chooseImage } = props;
   const classes = useStyles();
   const [emojiIcon, setEmojiIcon] = useState("");
-  useEffect(() => {
-    // console.log("🙆‍♂️");
-  });
 
   const handleClickEmoji = result => {
     setEmojiIcon(result);
-    console.log(result);
+    onChooseEmoji(result);
   };
   const handleRandomemoji = () => {
     const count = [217, 82, 62, 40, 153, 118, 167, 258];
     let randomType = parseInt(Math.random() * 8);
     let randomIcon = parseInt(Math.random() * (count[randomType] + 1));
     let randomResult = data[0].categories[randomType].emojis[randomIcon];
-    console.log(randomType);
-    console.log(randomIcon);
     setEmojiIcon(randomResult);
   };
   const handleClearemoji = () => {
@@ -54,7 +58,7 @@ function ChangeIconMenu() {
       <div>
         结果:
         <div style={{ width: 100, height: 40 }}>
-          <Emoji emoji={emojiIcon} size={28} />
+          <Emoji emoji={`${emojiIcon}`} size={28} />
         </div>
         名字:{emojiIcon}
       </div>
@@ -68,9 +72,7 @@ function ChangeIconMenu() {
               />
               <SplitLine />
               <ChangeIconMenuRoute
-                chooseImage={() => {
-                  alert("你选择了一个图片");
-                }}
+                chooseImage={chooseImage}
                 onClickEmoji={handleClickEmoji}
               />
             </div>
@@ -81,10 +83,17 @@ function ChangeIconMenu() {
   );
 }
 
-//传入emoji
-//出入随机事件
-//传入移除事件
-//传入选择了摸个emoji事件
-//出传入上传照片事件
+ChangeIconMenu.protoTypes = {
+  chooseImage: PropTypes.func,
+  onClickEmoji: PropTypes.func
+};
+ChangeIconMenu.defaultProps = {
+  chooseImage: () => {
+    alert("上传照片功能正在开发中, 稍后推出");
+  },
+  onChooseEmoji: result => {
+    console.log(result);
+  }
+};
 
 export { ChangeIconMenu };

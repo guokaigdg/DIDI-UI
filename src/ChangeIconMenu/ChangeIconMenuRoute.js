@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import "material-design-icons-iconfont/dist/material-design-icons.css";
 import Icon from "@material-ui/core/Icon";
 import { makeStyles } from "@material-ui/core/styles";
 import "emoji-mart/css/emoji-mart.css";
 import { Emoji } from "emoji-mart";
+import { emojiIndex } from "emoji-mart";
 import data from "./data";
-// import data from "../../public/apple";
 
 const useStyles = makeStyles({
   viewWrap: {
@@ -16,8 +16,6 @@ const useStyles = makeStyles({
     height: 288,
     marginLeft: 22,
     marginTop: 21
-    // marginBottom: 51,
-    // backgroundColor: "pink"
   },
   search: {
     display: "flex",
@@ -44,7 +42,6 @@ const useStyles = makeStyles({
     height: 20,
     fontSize: 14,
     marginLeft: 5,
-    // font-family:PingFangSC-Medium,PingFang SC;
     fontWeight: 500,
     color: "rgba(231,232,232,1)",
     //去掉边框以及阴影
@@ -78,38 +75,30 @@ const useStyles = makeStyles({
     width: 400,
     marginTop: 23,
     marginBottom: 14
-    // backgroundColor: "blue"
   },
   emojiPackage: {
     display: "flex",
     flexDirection: "column",
     width: 417,
-    // height: 147,
     marginTop: 9
-    // backgroundColor: "red"
   },
   title: {
     height: 17,
     fontSize: 12,
-    // font-family:PingFangSC-Medium,PingFang SC;
     fontWeight: 500,
     color: "rgba(184,186,186,1)"
-    // backgroundColor: "red"
   },
   recentIconWrap: {
     display: "flex",
     alignItems: "center",
     flexWrap: "wrap",
     width: 417,
-    // height: 30,
     marginTop: 17
-    // backgroundColor: "blue"
   },
   emojiIconWrap: {
     display: "flex",
     alignItems: "center",
     flexWrap: "wrap",
-    // backgroundColor: "pink",
     marginTop: 9
   },
   emojiIcon: {
@@ -122,7 +111,6 @@ const useStyles = makeStyles({
     height: 30,
     width: 30,
     cursor: "pointer"
-    // backgroundColor: "red"
   },
 
   uploadImage: {
@@ -136,7 +124,6 @@ const useStyles = makeStyles({
     background: "rgba(0,158,202,1)",
     borderRadius: 5,
     cursor: "pointer"
-    // border: "1px solid rgba(32,32,34,1)"
   },
   uploadImageFont: {
     fontSize: 14,
@@ -146,7 +133,7 @@ const useStyles = makeStyles({
 });
 
 function EmojiIcon(props) {
-  const { onClickEmoji } = props;
+  const { onClickUploadEmoji } = props;
   const [value, setValue] = useState("");
   const [recentList, setRecentList] = useState([
     "grinning",
@@ -154,9 +141,7 @@ function EmojiIcon(props) {
     "joy",
     "smiley"
   ]);
-  useEffect(() => {
-    // setRecentList(["grinning", "grin", "joy", "smiley"]);
-  });
+
   const handleValue = e => {
     setValue(e.target.value);
   };
@@ -167,7 +152,7 @@ function EmojiIcon(props) {
   const updateRecentList = newEmoji => {
     for (let i = 0; i <= recentList.length; i++) {
       if (newEmoji === recentList[i]) {
-        //删除原来的的然后新加
+        //删除原来已经存在的emoji,然后新加一个到队列头部
         recentList.splice(i, 1);
         setRecentList([newEmoji, ...recentList]);
       } else {
@@ -179,12 +164,10 @@ function EmojiIcon(props) {
         }
       }
     }
-    console.log(recentList);
   };
   const handleOnClickEmoji = result => {
     updateRecentList(result);
-
-    onClickEmoji(result);
+    onClickUploadEmoji(result);
   };
 
   const classes = useStyles();
@@ -217,7 +200,7 @@ function EmojiIcon(props) {
                     handleOnClickEmoji(item);
                   }}
                 >
-                  <Emoji emoji={item} size={28} />
+                  <Emoji emoji={`${item}`} size={28} />
                 </div>
               ))}
             </div>
@@ -237,13 +220,34 @@ function EmojiIcon(props) {
                         handleOnClickEmoji(item);
                       }}
                     >
-                      <Emoji emoji={item} size={28} />
+                      <Emoji emoji={`${item}`} size={28} />
                     </div>
                   ))}
                 </div>
               </div>
             )
           )}
+        {value !== "" && (
+          <div className={classes.recentEmoji}>
+            <span className={classes.title}>搜索结果</span>
+            <div className={classes.recentIconWrap}>
+              {emojiIndex
+                .search(value)
+                .map(o => o.short_names)
+                .map((item, index) => (
+                  <div
+                    className={classes.emojiIcon}
+                    key={index + item}
+                    onClick={() => {
+                      handleOnClickEmoji(item);
+                    }}
+                  >
+                    <Emoji emoji={`${item}`} size={28} />
+                  </div>
+                ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -270,7 +274,7 @@ function ChangeIconMenuRoute(props) {
     <div>
       <Switch>
         <Route exact path="/emoji">
-          <EmojiIcon onClickEmoji={onClickEmoji} />
+          <EmojiIcon onClickUploadEmoji={onClickEmoji} />
         </Route>
         <Route exact path="/image">
           <UploadImage onClickUploadImage={chooseImage} />

@@ -28,7 +28,6 @@ const useStyles = makeStyles({
     width: 28,
     height: 20,
     fontSize: 14,
-    // fontFamily:"PingFangSC-Medium","PingFang SC",
     fontWeight: 500,
     marginTop: 8,
     color: "rgba(231,232,232,1)",
@@ -38,7 +37,6 @@ const useStyles = makeStyles({
     width: 56,
     height: 20,
     fontSize: 14,
-    // fontFamily:PingFangSC-Medium,PingFang SC;
     fontWeight: 500,
     marginTop: 8,
     color: "rgba(231,232,232,1)",
@@ -60,7 +58,6 @@ const useStyles = makeStyles({
     width: 28,
     height: 20,
     fontSize: 14,
-    // font-family:PingFangSC-Regular,PingFang SC;
     fontWeight: 400,
     color: "rgba(231,232,232,1)",
     marginLeft: 210,
@@ -70,7 +67,6 @@ const useStyles = makeStyles({
     width: 28,
     height: 20,
     fontSize: 14,
-    // font-family:PingFangSC-Regular,PingFang SC;
     fontWeight: 400,
     color: "rgba(231,232,232,1)",
     marginLeft: 24,
@@ -82,7 +78,6 @@ function ChangeIconMenuLink(props) {
   const classes = useStyles();
   let location = useLocation();
   let pathname = location.pathname;
-  console.log(pathname);
 
   return (
     <div className={classes.Wrap}>
