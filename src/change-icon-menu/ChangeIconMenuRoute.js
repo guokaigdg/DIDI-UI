@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
-import { Emoji } from "emoji-mart";
 import { emojiIndex } from "emoji-mart";
+import { ShowEmoji } from "../show-emoji/index";
 import Icon from "@material-ui/core/Icon";
 import "material-design-icons-iconfont/dist/material-design-icons.css";
-import "emoji-mart/css/emoji-mart.css";
 
 import data from "./data";
 
@@ -211,7 +210,7 @@ function EmojiIcon(props) {
                     handleOnClickEmoji(item);
                   }}
                 >
-                  <Emoji emoji={`${item}`} size={28} />
+                  <ShowEmoji emoji={`${item}`} size={28} />
                 </div>
               ))}
             </div>
@@ -231,7 +230,7 @@ function EmojiIcon(props) {
                         handleOnClickEmoji(item);
                       }}
                     >
-                      <Emoji emoji={`${item}`} size={28} />
+                      <ShowEmoji emoji={`${item}`} size={28} />
                     </div>
                   ))}
                 </div>
@@ -253,7 +252,7 @@ function EmojiIcon(props) {
                       handleOnClickEmoji(item);
                     }}
                   >
-                    <Emoji emoji={`${item}`} size={28} />
+                    <ShowEmoji emoji={`${item}`} size={28} />
                   </div>
                 ))}
             </div>

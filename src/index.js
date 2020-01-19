@@ -9,3 +9,5 @@ export { LayoutContainerTB8px } from "./layout-container-tb8px/index";
 export { LayoutContainerT6px } from "./layout-container-t6px/index";
 export { LayoutContainerB6px } from "./layout-container-b6px/index";
 export { ChangeIconMenu } from "./change-icon-menu/index";
+export { ShowEmoji } from "./show-emoji/index";
+export { default as emojiIndex } from "./emoji-search/index";

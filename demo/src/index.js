@@ -368,7 +368,7 @@ function Demo() {
 }
 
 function Demo2() {
-  const [emojiIcon, setEmojiIcon] = useState("");
+  const [emojiIcon, setEmojiIcon] = useState(`U+1F601`);
   const handleOnChooseEmoji = result => {
     setEmojiIcon(result);
   };
@@ -382,6 +382,7 @@ function Demo2() {
       />
       <h3>{emojiIcon}</h3>
       <h3>{emojiIcon}</h3>
+      <div id="haha">🍐🐶🍐😎⛎🕢👐🔔🍢🍝🍪🍲🍨🍦🍣🍛🍮🍡🍕🍜🍤🍟🍫🍔</div>
     </div>
   );
 }
