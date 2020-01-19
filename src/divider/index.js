@@ -8,8 +8,8 @@ const useStyle = makeStyles({
   }
 });
 
-function SplitLine() {
+function Divider() {
   const classes = useStyle();
   return <div className={classes.line} />;
 }
-export { SplitLine };
+export { Divider };

@@ -1,21 +1,19 @@
-import React, { Fragment } from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import { makeStyles } from "@material-ui/styles";
+import { Emoji } from "emoji-mart";
 import {
   Breadcrumb,
   Display,
   SidebarSwitch,
   StickyBlockBox,
-  SplitLine,
+  Divider,
   LayoutContainerTB8px,
   ChangeIconMenu
 } from "../../src/index";
-import Checkbox from "@material-ui/core/Checkbox";
-// import Switch from "@material-ui/core/Switch";
 import { BrowserRouter as Router, Switch } from "react-router-dom";
 import List from "./List";
 import Show from "./Show";
-
 /* ---------------------------------------------
 /*        |    breadcrumb 面包屑                |
 /* Sidebar|--------------------------------------
@@ -156,7 +154,7 @@ function Demo() {
 
     {
       icon: "android",
-      title: "我的安卓",
+      title: "我的安卓dasdad超字数测试asdadasdadadadadadada",
       href: "android"
     },
     {
@@ -187,7 +185,7 @@ function Demo() {
   ];
   const stickyBlockBoxList = [
     {
-      name: "IT技术IT技术IT技术IT技术IT技术IT技术IT技术IT技术",
+      name: "IT技术",
       type: "H1",
       href: "#it",
       node: [
@@ -239,29 +237,27 @@ function Demo() {
       href: "#pc"
     }
   ];
+  const [emojiIcon, setEmojiIcon] = useState("");
+  const handleOnChooseEmoji = result => {
+    setEmojiIcon(result);
+  };
   const classes = useStyles();
   return (
     <div className={classes.wrap}>
       <div className={classes.myself}>🚌</div>
       <div className={classes.left}>
         <div className={classes.sidebarSwitch}>
-          <SidebarSwitch />
-        </div>
-        <LayoutContainerTB8px>
-          <SplitLine />
-        </LayoutContainerTB8px>
-        <div>
-          <Checkbox
-            checked
-            // value="明天去小米之家"
-            value="checkedB"
-            color="primary"
+          <SidebarSwitch
+            icon="🍉"
+            title="我的工作区"
+            onSelect={result => {
+              alert(`你点击了${result}SidebarSwitch`);
+            }}
           />
         </div>
         <LayoutContainerTB8px>
-          <SplitLine />
+          <Divider />
         </LayoutContainerTB8px>
-
         <div className="diplay">
           <Display
             disPlayList={[
@@ -271,14 +267,22 @@ function Demo() {
                 href: "add"
               }
             ]}
+            onSelect={result => {
+              console.log(result);
+            }}
           />
           <LayoutContainerTB8px>
-            <SplitLine />
+            <Divider />
           </LayoutContainerTB8px>
-          <Display disPlayList={disPlayList} />
+          <Display
+            disPlayList={disPlayList}
+            onSelect={result => {
+              console.log(result);
+            }}
+          />
         </div>
       </div>
-      {/* ---------------breadcrumb 面包屑---------------------- */}
+      {/*----------------- breadcrumb 面包屑-------------------- */}
       <div className={classes.mid}>
         <div className={classes.breadcrumb}>
           <Router>
@@ -288,15 +292,25 @@ function Demo() {
             </Switch>
             {/* <Show /> */}
           </Router>
-          <div style={{ zIndex: 1 }}>
-            <ChangeIconMenu />
+          <div>
+            结果:
+            <div style={{ width: 100, height: 40 }}>
+              <Emoji emoji={`${emojiIcon}`} size={28} />
+            </div>
+            名字:{emojiIcon}
           </div>
+          <ChangeIconMenu
+            chooseImage={() => {
+              alert("上传照片功能正在开发中, 稍后推出");
+            }}
+            onChooseEmoji={handleOnChooseEmoji}
+          />
         </div>
         <div></div>
       </div>
       <div className={classes.right}>
         <LayoutContainerTB8px>
-          <SplitLine />
+          <Divider />
         </LayoutContainerTB8px>
         {/* 锚点导航 */}
         <div className={classes.stickyBlockbox}>
@@ -328,7 +342,7 @@ function Demo() {
             ]}
           />
           <LayoutContainerTB8px>
-            <SplitLine />
+            <Divider />
           </LayoutContainerTB8px>
           <Router>
             <StickyBlockBox list={stickyBlockBoxList} />
@@ -352,11 +366,24 @@ function Demo() {
     </div>
   );
 }
+
 function Demo2() {
+  const [emojiIcon, setEmojiIcon] = useState("");
+  const handleOnChooseEmoji = result => {
+    setEmojiIcon(result);
+  };
   return (
     <div>
-      <ChangeIconMenu />
+      <ChangeIconMenu
+        chooseImage={() => {
+          alert("上传照片功能正在开发中, 稍后推出");
+        }}
+        onChooseEmoji={handleOnChooseEmoji}
+      />
+      <h3>{emojiIcon}</h3>
+      <h3>{emojiIcon}</h3>
     </div>
   );
 }
+
 ReactDOM.render(<Demo2 />, document.querySelector("#demo"));

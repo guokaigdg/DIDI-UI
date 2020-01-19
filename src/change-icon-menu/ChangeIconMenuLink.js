@@ -25,52 +25,94 @@ const useStyles = makeStyles({
     marginLeft: 24
   },
   emojiFont: {
-    width: 28,
-    height: 20,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    width: 35,
+    height: 25,
     fontSize: 14,
     fontWeight: 500,
     marginTop: 8,
     color: "rgba(231,232,232,1)",
-    textDecoration: "none"
+    textDecoration: "none",
+    borderRadius: 3,
+    "&:hover": {
+      backgroundColor: "rgba(70,76,80,1)"
+    },
+    "&:active": {
+      backgroundColor: "rgba(63,68,71,1)"
+    }
   },
   imageFont: {
-    width: 56,
-    height: 20,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    width: 63,
+    height: 25,
     fontSize: 14,
     fontWeight: 500,
     marginTop: 8,
     color: "rgba(231,232,232,1)",
-    textDecoration: "none"
+    textDecoration: "none",
+    borderRadius: 3,
+    "&:hover": {
+      backgroundColor: "rgba(70,76,80,1)"
+    },
+    "&:active": {
+      backgroundColor: "rgba(63,68,71,1)"
+    }
   },
   emojiHint: {
+    position: "absolute",
     width: 28,
     height: 2,
-    marginTop: 10,
+    marginTop: 38,
     backgroundColor: "#EEEFEEFF"
   },
   imageHint: {
+    position: "absolute",
     width: 56,
     height: 2,
-    marginTop: 10,
+    marginTop: 38,
     backgroundColor: "#EEEFEEFF"
   },
   buttonLeft: {
-    width: 28,
-    height: 20,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    width: 35,
+    height: 25,
     fontSize: 14,
     fontWeight: 400,
+    borderRadius: 3,
     color: "rgba(231,232,232,1)",
     marginLeft: 210,
-    cursor: "pointer"
+    cursor: "pointer",
+    "&:hover": {
+      backgroundColor: "rgba(70,76,80,1)"
+    },
+    "&:active": {
+      backgroundColor: "rgba(63,68,71,1)"
+    }
   },
   buttonRight: {
-    width: 28,
-    height: 20,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    width: 35,
+    height: 25,
     fontSize: 14,
     fontWeight: 400,
+    borderRadius: 3,
     color: "rgba(231,232,232,1)",
-    marginLeft: 24,
-    cursor: "pointer"
+    marginLeft: 15,
+    cursor: "pointer",
+    "&:hover": {
+      backgroundColor: "rgba(70,76,80,1)"
+    },
+    "&:active": {
+      backgroundColor: "rgba(63,68,71,1)"
+    }
   }
 });
 function ChangeIconMenuLink(props) {
@@ -82,10 +124,10 @@ function ChangeIconMenuLink(props) {
   return (
     <div className={classes.Wrap}>
       <div className={classes.emojiWrap}>
-        <Link className={classes.emojiFont} to="./emoji">
+        <Link className={classes.emojiFont} to="./">
           表情
         </Link>
-        {pathname === "/emoji" && <span className={classes.emojiHint} />}
+        {pathname === "/" && <span className={classes.emojiHint} />}
       </div>
       <div className={classes.imageWrap}>
         <Link className={classes.imageFont} to="./image">

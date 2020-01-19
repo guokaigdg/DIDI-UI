@@ -4,28 +4,29 @@ import Display from "./display.js";
 
 /**
  * Display
- * @param {icon} 图标显示
+ * @param {icon} 图标
  * @param {title} 标题
- * @param {onSelct} 点击之后的方法
+ * @param {onSelect} 点击标题返回标题吗名字的方法
  * @returns
  */
 
 function DisplayWrap(props) {
-  const { disPlayList, onSelct } = props;
+  const { disPlayList, onSelect } = props;
+  const handleonCelct = titleName => {
+    onSelect(titleName);
+  };
   return (
     <div>
-      <Display list={disPlayList} clickDisplay={onSelct} />
+      <Display list={disPlayList} onclickDisplay={handleonCelct} />
     </div>
   );
 }
 DisplayWrap.protoTypes = {
   disPlayList: PropTypes.object,
-  onSelct: PropTypes.func
+  onSelect: PropTypes.func
 };
 DisplayWrap.defaultProps = {
   disPlayList: [{ icon: "book", title: "工作区" }],
-  onSelct: () => {
-    console.log("ok");
-  }
+  onSelect: () => {}
 };
 export { DisplayWrap };

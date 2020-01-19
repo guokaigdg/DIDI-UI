@@ -3,30 +3,37 @@ import PropTypes from "prop-types";
 import SidebarSwitch from "./SidebarSwitch.js";
 
 /**
- * 导航栏切换
+ * 侧边导航栏切换
  * @param {icon} 图标emoji
  * @param {title} 导航栏标题
- * @param {onSelct} 点击之后的方法
+ * @param {onSelect} 点击方法
  * @returns
  */
 
 function SidebarSwitchWrap(props) {
-  const { icon, title, onSelct } = props;
+  const { icon, title, onSelect } = props;
+  const handleonSelect = result => {
+    onSelect(result);
+  };
   return (
     <div>
-      <SidebarSwitch icon={icon} title={title} clickSidebarSwitch={onSelct} />
+      <SidebarSwitch
+        icon={icon}
+        title={title}
+        clickSidebarSwitch={handleonSelect}
+      />
     </div>
   );
 }
 SidebarSwitchWrap.protoTypes = {
   icon: PropTypes.string,
   title: PropTypes.string,
-  onSelct: PropTypes.func
+  onSelect: PropTypes.func
 };
 SidebarSwitchWrap.defaultProps = {
   icon: "👽️",
   title: "我的工作区",
-  onSelct: () => {
+  onSelect: () => {
     console.log("ok");
   }
 };

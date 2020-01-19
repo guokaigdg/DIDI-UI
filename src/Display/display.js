@@ -38,6 +38,7 @@ const useStyles = makeStyles({
   displayTitle: {
     height: 20,
     fontSize: 14,
+    marginRight: 24,
     fontWeight: 500,
     color: "#262C33",
     /* 字符串省略显示... */
@@ -48,13 +49,16 @@ const useStyles = makeStyles({
 });
 
 function Display(props) {
-  const { list, clickDisplay } = props;
-  const [isChoosen, setIsChoosen] = useState("");
+  const { list, onclickDisplay } = props;
   const classes = useStyles();
   return (
     <div>
       {list.map((item, index) => (
-        <div className={classes.displayWrap} key={index}>
+        <div
+          className={classes.displayWrap}
+          key={index}
+          onClick={() => onclickDisplay(item.href)}
+        >
           <div className={classes.displayIcon}>
             <div className={classes.materialIcons}>
               <Icon style={{ fontSize: 16 }}>{item.icon}</Icon>

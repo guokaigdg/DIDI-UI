@@ -1,4 +1,6 @@
 import React from "react";
+import "material-design-icons-iconfont/dist/material-design-icons.css";
+import Icon from "@material-ui/core/Icon";
 import { makeStyles } from "@material-ui/styles";
 
 const useStyles = makeStyles({
@@ -43,30 +45,31 @@ const useStyles = makeStyles({
     justifyContent: "center",
     alignItems: "center",
     width: 20,
-    height: 20
+    height: 20,
+    marginRight: 15
   },
   sidebarSwitchButton: {
-    width: 11,
-    height: 11
+    fontSize: 15,
+    color: "#8E9193FF"
   }
 });
 
 function SidebarSwitch(props) {
   const { icon, title, clickSidebarSwitch } = props;
   const classes = useStyles();
+  const handleonclickSidebarSwitch = () => {
+    clickSidebarSwitch(title);
+  };
   return (
     <div
       role={classes.button}
       className={classes.sidebarSwitchWrap}
-      onClick={clickSidebarSwitch}
+      onClick={handleonclickSidebarSwitch}
     >
       <div className={classes.sidebarSwitchIcon}>{icon}</div>
       <div className={classes.sidebarSwitchTitle}>{title}</div>
       <div className={classes.sidebarSwitchButtonWrap}>
-        <img
-          className={classes.sidebarSwitchButton}
-          src={require("../../public/sidebar-switch-button.png")}
-        />
+        <Icon className={classes.sidebarSwitchButton}>{"unfold_more"}</Icon>
       </div>
     </div>
   );

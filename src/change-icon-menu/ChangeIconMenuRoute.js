@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { Route, Switch } from "react-router-dom";
-import "material-design-icons-iconfont/dist/material-design-icons.css";
-import Icon from "@material-ui/core/Icon";
 import { makeStyles } from "@material-ui/core/styles";
-import "emoji-mart/css/emoji-mart.css";
 import { Emoji } from "emoji-mart";
 import { emojiIndex } from "emoji-mart";
+import Icon from "@material-ui/core/Icon";
+import "material-design-icons-iconfont/dist/material-design-icons.css";
+import "emoji-mart/css/emoji-mart.css";
+
 import data from "./data";
 
 const useStyles = makeStyles({
@@ -104,13 +105,21 @@ const useStyles = makeStyles({
   emojiIcon: {
     display: "flex",
     alignItems: "center",
+    justifyContent: "center",
     flexShrink: 0,
     fontSize: 26,
     marginRight: 4,
     marginBottom: 7,
     height: 30,
     width: 30,
-    cursor: "pointer"
+    cursor: "pointer",
+    borderRadius: 3,
+    "&:hover": {
+      backgroundColor: "rgba(70,76,80,1)"
+    },
+    "&:active": {
+      backgroundColor: "rgba(63,68,71,1)"
+    }
   },
 
   uploadImage: {
@@ -136,10 +145,12 @@ function EmojiIcon(props) {
   const { onClickUploadEmoji } = props;
   const [value, setValue] = useState("");
   const [recentList, setRecentList] = useState([
-    "grinning",
-    "grin",
+    // 默认使用频率最高的五个emoji,数据统计来自http://emojitracker.com/
     "joy",
-    "smiley"
+    "heart",
+    "heart_eyes",
+    "recycle",
+    "sob"
   ]);
 
   const handleValue = e => {
@@ -273,7 +284,7 @@ function ChangeIconMenuRoute(props) {
   return (
     <div>
       <Switch>
-        <Route exact path="/emoji">
+        <Route exact path="/">
           <EmojiIcon onClickUploadEmoji={onClickEmoji} />
         </Route>
         <Route exact path="/image">

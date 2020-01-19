@@ -4,14 +4,13 @@ const useStyle = makeStyles({
   line: {
     display: "flex",
     alignItems: "center",
-    width: "100%",
-    paddingBottom: 6
+    width: "100%"
   }
 });
 
-function LayoutContainerB6px(props) {
+function LayoutContainerTB(props) {
   const { children } = props;
   const classes = useStyle();
   return <div className={classes.line}>{children}</div>;
 }
-export default LayoutContainerB6px;
+export { LayoutContainerTB };
