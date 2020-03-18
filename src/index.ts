@@ -1,4 +1,4 @@
-export { DisplayWrap as Display } from "./display/index";
+export { DisplayWrap as Display } from "./display-menu/index";
 export { SidebarSwitchWrap as SidebarSwitch } from "./sidebar-switch/index";
 export { BreadcrumbWrap as Breadcrumb } from "./bread-crumb/index";
 export { StickyBlockBoxWrap as StickyBlockBox } from "./sticky-block-box/index";
