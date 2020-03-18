@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
-import { Display, Divider, Menu } from "../../src/index";
+import { Menu } from "../../src/index";
 
 function Demo2() {
   return (

@@ -14,9 +14,6 @@ module.exports = {
       resolve: {
         extensions: [".js", ".jsx", ".ts", ".tsx", "index.js", ".json"]
       }
-      // entry: {
-      //   demo: ["./demo/src/index.js"]
-      // }
     }
   }
 };
