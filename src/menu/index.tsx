@@ -1,13 +1,10 @@
 import * as React from "react";
 import { MainMenu, SubMenu, SwitchButton } from "../index";
-
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 // import { useToggle } from "@umijs/hooks";
-
 // import CssBaseline from "@material-ui/core/CssBaseline";
 // import { Grid, Paper } from "@material-ui/core";
-
 // import Container from "@material-ui/core/Container";
 // import { blue } from "@material-ui/core/colors";
 
@@ -19,8 +16,6 @@ import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 
 function Menu(props: { data: any }) {
   const [state, setState] = React.useState(false);
-
-  //   const { state, toggle } = useToggle();
   const handleChangeMode = (state: boolean) => {
     setState(state);
     console.log(state);

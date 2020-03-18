@@ -19,7 +19,6 @@ const useStyles = makeStyles({
       backgroundColor: "#DAD9D7"
     }
   },
-
   displayIcon: {
     display: "flex",
     alignItems: "center",
