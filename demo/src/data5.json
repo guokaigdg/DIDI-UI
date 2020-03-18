@@ -1,0 +1,146 @@
+{
+  "object": "menu",
+  "type": "main_menu",
+  "nodes": {
+    "object": "container",
+    "type": "main_container_tb6px",
+    "size": {
+      "width": 220,
+      "max_height": "default"
+    },
+    "nodes": [
+      {
+        "object": "layout",
+        "type": "layout_container_tb8px",
+        "nodes": [
+          {
+            "object": "component",
+            "type": "filter_input_view",
+            "placeholder": "过滤操作测试..."
+          }
+        ]
+      },
+      {
+        "object": "layout",
+        "type": "layout_container_tb6px",
+        "nodes": [
+          {
+            "object": "component",
+            "type": "small_icon_view",
+            "icon": "home",
+            "text": "菜单",
+            "nodes": {
+              "object": "sub_component",
+              "type": "text",
+              "text": "删除",
+              "nodes": {
+                "object": "sub_component",
+                "type": "shortcuts_key",
+                "keys": " ⌘+C"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "object": "layout",
+        "type": "layout_container_tb3px",
+        "nodes": [
+          {
+            "object": "layout",
+            "type": "divider"
+          }
+        ]
+      },
+      {
+        "object": "layout",
+        "type": "layout_container_tb6px",
+        "nodes": [
+          {
+            "object": "component",
+            "type": "group_title_view",
+            "text": "分组"
+          }
+        ]
+      },
+      {
+        "object": "layout",
+        "type": "layout_container",
+        "nodes": [
+          {
+            "object": "component",
+            "type": "select_group_view",
+            "nodes": [
+              {
+                "object": "component",
+                "type": "color_view",
+                "color": "#ededed",
+                "text": "默认"
+              },
+              {
+                "object": "component",
+                "type": "color_view",
+                "color": "blue",
+                "text": "蓝色"
+              },
+              {
+                "object": "component",
+                "type": "color_view",
+                "color": "red",
+                "text": "红色"
+              },
+              {
+                "object": "component",
+                "type": "color_view",
+                "color": "pink",
+                "text": "粉色"
+              },
+              {
+                "object": "component",
+                "type": "color_view",
+                "color": "orange",
+                "text": "橘色"
+              },
+              {
+                "object": "component",
+                "type": "color_view",
+                "color": "green",
+                "text": "绿色"
+              },
+              {
+                "object": "component",
+                "type": "color_view",
+                "color": "blue",
+                "text": "蓝色"
+              },
+              {
+                "object": "component",
+                "type": "color_view",
+                "color": "red",
+                "text": "红色"
+              },
+              {
+                "object": "component",
+                "type": "color_view",
+                "color": "pink",
+                "text": "粉色"
+              },
+              {
+                "object": "component",
+                "type": "color_view",
+                "color": "orange",
+                "text": "橘色"
+              },
+              {
+                "object": "component",
+                "type": "color_view",
+                "color": "green",
+                "text": "绿色"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

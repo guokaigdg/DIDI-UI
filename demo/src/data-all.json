@@ -1,0 +1,578 @@
+{
+  "object": "menu",
+  "type": "main_menu",
+  "nodes": {
+    "object": "container",
+    "type": "main_container_tb6px",
+    "size": {
+      "width": "default",
+      "max_height": "default"
+    },
+    "nodes": [
+      {
+        "object": "layout",
+        "type": "layout_container_tb8px",
+        "nodes": [
+          {
+            "object": "component",
+            "type": "small_icon_view",
+            "icon": "home",
+            "text": "颜色-小图标",
+            "nodes": {
+              "object": "sub_component",
+              "type": "text",
+              "text": "提示"
+            }
+          }
+        ]
+      },
+      {
+        "object": "layout",
+        "type": "divider"
+      },
+      {
+        "object": "layout",
+        "type": "layout_container_tb6px",
+        "nodes": [
+          {
+            "object": "component",
+            "type": "medium_icon_view",
+            "url": "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3887215595,282801639&fm=26&gp=0.jpg",
+            "text": "工作区-中图标",
+            "nodes": {
+              "object": "sub_component",
+              "type": "arrow",
+              "menu": {
+                "object": "menu",
+                "type": "sub_menu",
+                "nodes": {
+                  "object": "container",
+                  "type": "main_container_tb6px",
+                  "size": {
+                    "width": "default",
+                    "max_height": "default"
+                  },
+                  "nodes": [
+                    {
+                      "object": "layout",
+                      "type": "layout_container_tb6px",
+                      "nodes": [
+                        {
+                          "object": "component",
+                          "type": "select_group_view",
+                          "nodes": [
+                            {
+                              "object": "component",
+                              "type": "color_view",
+                              "color": "#ededed",
+                              "text": "灰色"
+                            },
+                            {
+                              "object": "component",
+                              "type": "color_view",
+                              "color": "red",
+                              "text": "红色"
+                            },
+                            {
+                              "object": "component",
+                              "type": "color_view",
+                              "color": "pink",
+                              "text": "粉色"
+                            },
+                            {
+                              "object": "component",
+                              "type": "color_view",
+                              "color": "orange",
+                              "text": "橘色"
+                            },
+                            {
+                              "object": "component",
+                              "type": "color_view",
+                              "color": "blue",
+                              "text": "蓝色"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "object": "component",
+            "type": "medium_icon_view",
+            "url": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1583538564500&di=7d5736a891515dbfe7da2dbacc4e9cdc&imgtype=0&src=http%3A%2F%2Fpic.962.net%2Fup%2F2020-2%2F15821692509563673.jpg",
+            "text": "工作区2"
+          }
+        ]
+      },
+      {
+        "object": "layout",
+        "type": "layout_container_tb6px",
+        "nodes": [
+          {
+            "object": "component",
+            "type": "big_icon_view",
+            "url": "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3887215595,282801639&fm=26&gp=0.jpg",
+            "text": "工作区1- 大图标",
+            "desc": "本页面嵌入一个子页面",
+            "nodes": {
+              "object": "sub_component",
+              "type": "shortcuts_key",
+              "keys": " ⌘+C"
+            }
+          },
+          {
+            "object": "component",
+            "type": "big_icon_view",
+            "url": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1583538564500&di=7d5736a891515dbfe7da2dbacc4e9cdc&imgtype=0&src=http%3A%2F%2Fpic.962.net%2Fup%2F2020-2%2F15821692509563673.jpg",
+            "text": "工作区2",
+            "desc": "本页面嵌入一个子页面",
+            "nodes": {
+              "object": "sub_component",
+              "type": "switch_button"
+            }
+          }
+        ]
+      },
+      {
+        "object": "layout",
+        "type": "layout_container_tb6px",
+        "nodes": [
+          {
+            "object": "component",
+            "type": "emoji_icon_view",
+            "emoji": "🍉",
+            "text": "emoji图标",
+            "nodes": {
+              "object": "sub_component",
+              "type": "select_button",
+              "placeholder": "请选择"
+            }
+          },
+          {
+            "object": "component",
+            "type": "emoji_icon_view",
+            "emoji": "🚴",
+            "text": "emoji图标2",
+            "nodes": {
+              "object": "sub_component",
+              "type": "shortcuts_key",
+              "keys": "shift+C"
+            }
+          }
+        ]
+      },
+      {
+        "object": "layout",
+        "type": "layout_container_tb6px",
+        "nodes": [
+          {
+            "object": "component",
+            "type": "drag_view",
+            "icon": "4k",
+            "text": "图标",
+            "nodes": {
+              "object": "sub_component",
+              "type": "more_button"
+            }
+          },
+          {
+            "object": "component",
+            "type": "drag_view",
+            "icon": "email",
+            "text": "图标2"
+          }
+        ]
+      },
+      {
+        "object": "layout",
+        "type": "layout_container_tb6px",
+        "nodes": [
+          {
+            "object": "component",
+            "type": "color_view",
+            "color": "#ededed",
+            "text": "灰色",
+            "nodes": {
+              "object": "sub_component",
+              "type": "selected_icon",
+              "menu": {
+                "object": "menu",
+                "type": "sub_menu",
+                "nodes": {
+                  "object": "container",
+                  "type": "main_container_tb6px",
+                  "size": {
+                    "width": "default",
+                    "max_height": "default"
+                  },
+                  "nodes": [
+                    {
+                      "object": "layout",
+                      "type": "layout_container_tb6px",
+                      "nodes": [
+                        {
+                          "object": "component",
+                          "type": "select_group_view",
+                          "nodes": [
+                            {
+                              "object": "component",
+                              "type": "color_view",
+                              "color": "#ededed",
+                              "text": "灰色"
+                            },
+                            {
+                              "object": "component",
+                              "type": "color_view",
+                              "color": "red",
+                              "text": "红色"
+                            },
+                            {
+                              "object": "component",
+                              "type": "color_view",
+                              "color": "pink",
+                              "text": "粉色"
+                            },
+                            {
+                              "object": "component",
+                              "type": "color_view",
+                              "color": "orange",
+                              "text": "橘色"
+                            },
+                            {
+                              "object": "component",
+                              "type": "color_view",
+                              "color": "blue",
+                              "text": "蓝色"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "object": "component",
+            "type": "color_view",
+            "color": "red",
+            "text": "红色"
+          },
+          {
+            "object": "component",
+            "type": "color_view",
+            "color": "pink",
+            "text": "粉色"
+          },
+          {
+            "object": "component",
+            "type": "color_view",
+            "color": "orange",
+            "text": "橘色",
+            "nodes": {
+              "object": "sub_component",
+              "type": "text",
+              "text": "提示"
+            }
+          }
+        ]
+      },
+      {
+        "object": "layout",
+        "type": "divider"
+      },
+      {
+        "object": "layout",
+        "type": "layout_container_tb8px",
+        "nodes": [
+          {
+            "object": "component",
+            "type": "user_info_view",
+            "url": "https://upload.jianshu.io/users/upload_avatars/13479263/d45ed900-578e-4881-a526-d8135d7e4d90.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240",
+            "text": "ma_meng",
+            "desc": "guokaigdg@gmail.com"
+          }
+        ]
+      },
+      {
+        "object": "layout",
+        "type": "layout_container_tb6px",
+        "nodes": [
+          {
+            "object": "component",
+            "type": "user_work_view",
+            "emoji": "👷",
+            "text": "工作区",
+            "desc": "我的方案- 1成员"
+          }
+        ]
+      },
+      {
+        "object": "layout",
+        "type": "layout_container_tb6px",
+        "nodes": [
+          {
+            "object": "component",
+            "type": "user_work_view",
+            "emoji": "👨‍⚕️",
+            "text": "工作区",
+            "desc": "我的方案- 2成员",
+            "nodes": {
+              "object": "sub_component",
+              "type": "select_button",
+              "placeholder": "你的选择是?",
+              "menu": {
+                "object": "menu",
+                "type": "sub_menu",
+                "nodes": {
+                  "object": "container",
+                  "type": "main_container_tb6px",
+                  "size": {
+                    "width": "default",
+                    "max_height": "default"
+                  },
+                  "nodes": [
+                    {
+                      "object": "layout",
+
+                      "type": "layout_container_tb6px",
+                      "nodes": [
+                        {
+                          "object": "component",
+                          "type": "select_group_view",
+                          "nodes": [
+                            {
+                              "object": "component",
+                              "type": "color_view",
+                              "color": "blue",
+                              "text": "蓝色"
+                            },
+                            {
+                              "object": "component",
+                              "type": "color_view",
+                              "color": "red",
+                              "text": "红色"
+                            },
+                            {
+                              "object": "component",
+                              "type": "color_view",
+                              "color": "pink",
+                              "text": "粉色"
+                            },
+                            {
+                              "object": "component",
+                              "type": "color_view",
+                              "color": "orange",
+                              "text": "橘色"
+                            },
+                            {
+                              "object": "component",
+                              "type": "color_view",
+                              "color": "blue",
+                              "text": "蓝色"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "object": "layout",
+        "type": "divider"
+      },
+      {
+        "object": "layout",
+        "type": "layout_container_tb6px",
+        "nodes": [
+          {
+            "object": "component",
+            "type": "big_add_button",
+            "text": "创建或键入社区"
+          }
+        ]
+      },
+      {
+        "object": "layout",
+        "type": "divider"
+      },
+      {
+        "object": "layout",
+        "type": "layout_container_tb8px",
+        "nodes": [
+          {
+            "object": "component",
+            "type": "big_add_button",
+            "text": "工作区"
+          }
+        ]
+      },
+      {
+        "object": "layout",
+        "type": "divider"
+      },
+      {
+        "object": "layout",
+        "type": "layout_container_tb8px",
+        "nodes": [
+          {
+            "object": "component",
+            "type": "filter_input_view",
+            "placeholder": "过滤操作测试..."
+          }
+        ]
+      },
+      {
+        "object": "layout",
+        "type": "divider"
+      },
+      {
+        "object": "layout",
+        "type": "layout_container_tb8px",
+        "nodes": [
+          {
+            "object": "component",
+            "type": "group_title_view",
+            "text": "分组一"
+          }
+        ]
+      },
+      {
+        "object": "layout",
+        "type": "divider"
+      },
+      {
+        "object": "layout",
+        "type": "layout_container_tb8px",
+        "nodes": [
+          {
+            "object": "component",
+            "type": "hint_text",
+            "text": "说明文本"
+          },
+          {
+            "object": "component",
+            "type": "hint_text",
+            "text": "最后编辑者: xxxx"
+          },
+          {
+            "object": "component",
+            "type": "hint_text",
+            "text": "2019年10月10日"
+          }
+        ]
+      },
+      {
+        "object": "layout",
+        "type": "divider"
+      },
+      {
+        "object": "layout",
+        "type": "layout_container_tb8px",
+        "nodes": [
+          {
+            "object": "component",
+            "type": "hint_button",
+            "text": "说明文本"
+          }
+        ]
+      },
+      {
+        "object": "layout",
+        "type": "divider"
+      },
+      {
+        "object": "layout",
+        "type": "layout_container_tb8px",
+        "nodes": [
+          {
+            "object": "component",
+            "type": "drag_group_view",
+            "nodes": [
+              {
+                "object": "component",
+                "type": "drag_view",
+                "icon": "android",
+                "text": "名称"
+              },
+              {
+                "object": "component",
+                "type": "drag_view",
+                "icon": "vpn_key",
+                "text": "年龄"
+              },
+              {
+                "object": "component",
+                "type": "drag_view",
+                "icon": "4k",
+                "text": "安卓"
+              },
+              {
+                "object": "component",
+                "type": "drag_view",
+                "icon": "bluetooth",
+                "text": "蓝牙"
+              },
+              {
+                "object": "component",
+                "type": "drag_view",
+                "icon": "desktop_mac",
+                "text": "Mac"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "object": "layout",
+        "type": "divider"
+      },
+      {
+        "object": "layout",
+        "type": "layout_container_tb8px",
+        "nodes": [
+          {
+            "object": "component",
+            "type": "select_group_view",
+            "nodes": [
+              {
+                "object": "component",
+                "type": "color_view",
+                "color": "#ededed",
+                "text": "灰色"
+              },
+              {
+                "object": "component",
+                "type": "color_view",
+                "color": "red",
+                "text": "红色"
+              },
+              {
+                "object": "component",
+                "type": "color_view",
+                "color": "pink",
+                "text": "粉色"
+              },
+              {
+                "object": "component",
+                "type": "color_view",
+                "color": "orange",
+                "text": "橘色"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

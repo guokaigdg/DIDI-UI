@@ -1,0 +1,70 @@
+{
+  "object": "menu",
+  "type": "main_menu",
+  "nodes": {
+    "object": "container",
+    "type": "main_container_tb6px",
+    "size": {
+      "width": 220,
+      "max_height": "default"
+    },
+    "nodes": [
+      {
+        "object": "layout",
+        "type": "layout_container",
+        "nodes": [
+          {
+            "object": "component",
+            "type": "small_icon_view",
+            "text": "空"
+          },
+          {
+            "object": "component",
+            "type": "small_icon_view",
+            "text": "总行数"
+          },
+          {
+            "object": "component",
+            "type": "small_icon_view",
+            "text": "非空行数"
+          },
+          {
+            "object": "component",
+            "type": "small_icon_view",
+            "text": "为空行数"
+          },
+          {
+            "object": "component",
+            "type": "small_icon_view",
+            "text": "求和"
+          },
+          {
+            "object": "component",
+            "type": "small_icon_view",
+            "text": "求平均值"
+          },
+          {
+            "object": "component",
+            "type": "small_icon_view",
+            "text": "最大值",
+            "nodes": {
+              "object": "sub_component",
+              "type": "select_button",
+              "placeholder": "请选择"
+            }
+          },
+          {
+            "object": "component",
+            "type": "small_icon_view",
+            "text": "最小值",
+            "nodes": {
+              "object": "sub_component",
+              "type": "select_button",
+              "placeholder": "请选择"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

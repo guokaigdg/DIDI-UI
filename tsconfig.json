@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    "outDir": "./lib",
+    //     "baseUrl": "./src",
+    "module": "commonjs",
+    "target": "es5",
+    "lib": ["es5", "es6", "es7", "es2017", "dom"],
+    "sourceMap": true,
+    "allowJs": true, // todo: make this false when all .js files have been converted to .ts/.tsx
+    "jsx": "react",
+    "moduleResolution": "node",
+    "rootDirs": ["src"],
+    "forceConsistentCasingInFileNames": true,
+    "removeComments": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "declaration": false, // todo: make this true when all .js files have been converted to .ts/.tsx
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+
+    "skipLibCheck": true,
+    "rootDir": ".",
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "noUnusedParameters": true,
+    "strictNullChecks": true,
+    "importHelpers": true,
+    "downlevelIteration": true
+  },
+  "include": ["src/**/*"],
+  "exclude": [
+    "node_modules",
+    "es",
+    "lib",
+    "scripts",
+    "build",
+    "build/lib",
+    "tests/**",
+    ".storybook/**",
+    ".idea",
+    ".html",
+    "src/**/*.test.js",
+    "src/**/*.test.ts",
+    "src/**/*.stories.js",
+    "src/**/*.stories.ts"
+  ]
+}

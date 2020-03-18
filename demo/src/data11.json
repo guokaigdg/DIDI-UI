@@ -1,0 +1,167 @@
+{
+  "object": "menu",
+  "type": "main_menu",
+  "nodes": {
+    "object": "container",
+    "type": "main_container_tb6px",
+    "size": {
+      "width": 220,
+      "max_height": "default"
+    },
+    "nodes": [
+      {
+        "object": "layout",
+        "type": "layout_container_tb6px",
+        "nodes": [
+          {
+            "object": "component",
+            "type": "small_icon_view",
+            "icon": "home",
+            "text": "菜单",
+            "nodes": {
+              "object": "sub_component",
+              "type": "switch_button"
+            }
+          },
+          {
+            "object": "component",
+            "type": "small_icon_view",
+            "icon": "home",
+            "text": "菜单",
+            "nodes": {
+              "object": "sub_component",
+              "type": "switch_button"
+            }
+          }
+        ]
+      },
+      {
+        "object": "layout",
+        "type": "layout_container_tb3px",
+        "nodes": [
+          {
+            "object": "layout",
+            "type": "divider"
+          }
+        ]
+      },
+      {
+        "object": "layout",
+        "type": "layout_container_tb6px",
+        "nodes": [
+          {
+            "object": "component",
+            "type": "small_icon_view",
+            "icon": "home",
+            "text": "菜单",
+            "nodes": {
+              "object": "sub_component",
+              "type": "switch_button"
+            }
+          }
+        ]
+      },
+      {
+        "object": "layout",
+        "type": "layout_container_tb3px",
+        "nodes": [
+          {
+            "object": "layout",
+            "type": "divider"
+          }
+        ]
+      },
+      {
+        "object": "layout",
+        "type": "layout_container_tb6px",
+        "nodes": [
+          {
+            "object": "component",
+            "type": "small_icon_view",
+            "text": "删除"
+          },
+          {
+            "object": "component",
+            "type": "small_icon_view",
+            "text": "删除"
+          }
+        ]
+      },
+      {
+        "object": "layout",
+        "type": "layout_container_tb3px",
+        "nodes": [
+          {
+            "object": "layout",
+            "type": "divider"
+          }
+        ]
+      },
+      {
+        "object": "layout",
+        "type": "layout_container_tb6px",
+        "nodes": [
+          {
+            "object": "component",
+            "type": "small_icon_view",
+            "icon": "home",
+            "text": "导出",
+            "nodes": {
+              "object": "sub_component",
+              "type": "shortcuts_key",
+              "keys": " ⌘+C"
+            }
+          },
+          {
+            "object": "component",
+            "type": "small_icon_view",
+            "icon": "null",
+            "text": "PDF、HTML、Markdown"
+          }
+        ]
+      },
+      {
+        "object": "layout",
+        "type": "layout_container_tb3px",
+        "nodes": [
+          {
+            "object": "layout",
+            "type": "divider"
+          }
+        ]
+      },
+      {
+        "object": "layout",
+        "type": "layout_container_tb6px",
+        "nodes": [
+          {
+            "object": "component",
+            "type": "hint_text",
+            "text": "说明文本"
+          },
+          {
+            "object": "component",
+            "type": "hint_text",
+            "text": "最后编辑者: xxxx"
+          },
+          {
+            "object": "component",
+            "type": "hint_text",
+            "text": "2019年10月10日"
+          }
+        ]
+      },
+      {
+        "object": "layout",
+        "type": "layout_container",
+        "nodes": [
+          {
+            "object": "component",
+            "type": "hint_button",
+            "text": "说明文字"
+          }
+        ]
+      }
+    ]
+  }
+}

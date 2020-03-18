@@ -1,0 +1,205 @@
+{
+  "object": "menu",
+  "type": "main_menu",
+  "nodes": {
+    "object": "container",
+    "type": "main_container_tb6px",
+    "size": {
+      "width": 320,
+      "max_height": "default"
+    },
+    "nodes": [
+      {
+        "object": "layout",
+        "type": "layout_container_tb6px",
+        "nodes": [
+          {
+            "object": "component",
+            "type": "group_title_view",
+            "text": "基础组件"
+          }
+        ]
+      },
+      {
+        "object": "layout",
+        "type": "layout_container_b6px",
+        "nodes": [
+          {
+            "object": "component",
+            "type": "big_icon_view",
+            "url": "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3887215595,282801639&fm=26&gp=0.jpg",
+            "text": "工作区1- 大图标",
+            "desc": "本页面嵌入一个子页面",
+            "nodes": {
+              "object": "sub_component",
+              "type": "shortcuts_key",
+              "keys": " ⌘+C"
+            }
+          },
+          {
+            "object": "component",
+            "type": "big_icon_view",
+            "url": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1583538564500&di=7d5736a891515dbfe7da2dbacc4e9cdc&imgtype=0&src=http%3A%2F%2Fpic.962.net%2Fup%2F2020-2%2F15821692509563673.jpg",
+            "text": "工作区2",
+            "desc": "本页面嵌入一个子页面",
+            "nodes": {
+              "object": "sub_component",
+              "type": "switch_button"
+            }
+          }
+        ]
+      },
+      {
+        "object": "layout",
+        "type": "layout_container_tb3px",
+        "nodes": [
+          {
+            "object": "layout",
+            "type": "divider"
+          }
+        ]
+      },
+      {
+        "object": "layout",
+        "type": "layout_container_tb6px",
+        "nodes": [
+          {
+            "object": "component",
+            "type": "group_title_view",
+            "text": "变成"
+          }
+        ]
+      },
+      {
+        "object": "layout",
+        "type": "layout_container_tb6px",
+        "nodes": [
+          {
+            "object": "component",
+            "type": "medium_icon_view",
+            "url": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1583538564500&di=7d5736a891515dbfe7da2dbacc4e9cdc&imgtype=0&src=http%3A%2F%2Fpic.962.net%2Fup%2F2020-2%2F15821692509563673.jpg",
+            "text": "数字列表1"
+          },
+          {
+            "object": "component",
+            "type": "medium_icon_view",
+            "url": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1583538564500&di=7d5736a891515dbfe7da2dbacc4e9cdc&imgtype=0&src=http%3A%2F%2Fpic.962.net%2Fup%2F2020-2%2F15821692509563673.jpg",
+            "text": "数字列表2"
+          },
+          {
+            "object": "component",
+            "type": "medium_icon_view",
+            "url": "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3887215595,282801639&fm=26&gp=0.jpg",
+            "text": "数字列表3",
+            "nodes": {
+              "object": "sub_component",
+              "type": "arrow",
+              "menu": {
+                "object": "menu",
+                "type": "sub_menu",
+                "nodes": {
+                  "object": "container",
+                  "type": "main_container_tb6px",
+                  "size": {
+                    "width": "default",
+                    "max_height": "default"
+                  },
+                  "nodes": [
+                    {
+                      "object": "layout",
+                      "type": "layout_container_tb6px",
+                      "nodes": [
+                        {
+                          "object": "component",
+                          "type": "select_group_view",
+                          "nodes": [
+                            {
+                              "object": "component",
+                              "type": "color_view",
+                              "color": "#ededed",
+                              "text": "灰色"
+                            },
+                            {
+                              "object": "component",
+                              "type": "color_view",
+                              "color": "red",
+                              "text": "红色"
+                            },
+                            {
+                              "object": "component",
+                              "type": "color_view",
+                              "color": "pink",
+                              "text": "粉色"
+                            },
+                            {
+                              "object": "component",
+                              "type": "color_view",
+                              "color": "orange",
+                              "text": "橘色"
+                            },
+                            {
+                              "object": "component",
+                              "type": "color_view",
+                              "color": "blue",
+                              "text": "蓝色"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "object": "layout",
+        "type": "layout_container_tb3px",
+        "nodes": [
+          {
+            "object": "layout",
+            "type": "divider"
+          }
+        ]
+      },
+      {
+        "object": "layout",
+        "type": "layout_container_tb6px",
+        "nodes": [
+          {
+            "object": "component",
+            "type": "group_title_view",
+            "text": "操作"
+          }
+        ]
+      },
+
+      {
+        "object": "layout",
+        "type": "layout_container",
+        "nodes": [
+          {
+            "object": "component",
+            "type": "small_icon_view",
+            "icon": "home",
+            "text": "删除"
+          }
+        ]
+      },
+      {
+        "object": "layout",
+        "type": "layout_container_b6px",
+        "nodes": [
+          {
+            "object": "component",
+            "type": "small_icon_view",
+            "icon": "4k",
+            "text": "删除"
+          }
+        ]
+      }
+    ]
+  }
+}
