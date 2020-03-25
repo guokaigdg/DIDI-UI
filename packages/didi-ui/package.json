@@ -12,7 +12,8 @@
     "public"
   ],
   "scripts": {
-    "build": "tsc ",
+    "build": "nwb build-react-component --copy-files",
+    "build:ts": "tsc",
     "clean": "nwb clean-module && nwb clean-demo",
     "prepublishOnly": "npm run build",
     "start": "nwb serve-react-demo",
@@ -84,5 +85,6 @@
       "path": "cz-conventional-changelog"
     }
   },
-  "proxy": "http://localhost:3000"
+  "proxy": "http://localhost:3000",
+  "gitHead": "cd4f8e4722f419f8702927e174cbb2214c8c6b7f"
 }
