@@ -1,6 +1,6 @@
 {
-  "name": "didi-ui",
-  "version": "2.3.0",
+  "name": "mycat-peiqi",
+  "version": "1.0.0",
   "description": "button",
   "main": "lib/src/index.js",
   "module": "es/index.js",
@@ -86,5 +86,5 @@
     }
   },
   "proxy": "http://localhost:3000",
-  "gitHead": "cd4f8e4722f419f8702927e174cbb2214c8c6b7f"
+  "gitHead": "19797955c2573ec1ccab4906e2fd8dd30ae17f61"
 }
