@@ -1,6 +1,6 @@
 {
   "name": "didi-ui",
-  "version": "1.2.1",
+  "version": "0.1.0",
   "description": "button",
   "main": "lib/src/index.js",
   "module": "es/index.js",
