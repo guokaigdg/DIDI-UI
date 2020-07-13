@@ -43,7 +43,7 @@
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-router-dom": "^5.1.2",
-    "standard-version": "^7.0.1",
+    "standard-version": "^8.0.1",
     "styled-components": "^4.4.1",
     "typeface-roboto": "0.0.75",
     "uuid": "^3.3.3"
