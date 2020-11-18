@@ -1,5 +1,5 @@
 <br/>
-<h1 align="center">solidoc-base-component-lib</h1>
+<h1 align="center">DIDI-UI</h1>
 
 <br/>
 <div align="center">
@@ -9,7 +9,7 @@ React UI 库
 [![CircleCI branch](https://img.shields.io/circleci/project/github/ant-design/ant-design/master.svg?style=flat-square)](https://circleci.com/gh/ant-design/ant-design)
 [![CI Status](https://github.com/ant-design/ant-design/workflows/test/badge.svg)](https://github.com/ant-design/ant-design/actions?query=workflow%3Atest)
 
-[![](https://flat.badgen.net/npm/v/antd?icon=npm)](https://www.npmjs.com/package/solidoc-base-component-lib)
+[![](https://flat.badgen.net/npm/v/antd?icon=npm)](https://www.npmjs.com/package/didi-ui)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fant-design%2Fant-design.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fant-design%2Fant-design?ref=badge_shield)
 
 </div>
@@ -34,11 +34,11 @@ React UI 库
 ### 📦 安装
 
 ```
-npm i solidoc-base-component-lib
+npm i didi-ui
 or
-cnpm i solidoc-base-component-lib
+cnpm i didi-ui
 or
-yarn add solidoc-base-component-lib
+yarn add didi-ui
 ```
 
 <br/>
@@ -46,7 +46,7 @@ yarn add solidoc-base-component-lib
 ### ⚙️ 使用
 
 ```js
-import { LayoutContainerTB6px, Divider } from "solidoc-base-component-lib";
+import { LayoutContainerTB6px, Divider } from 'didi-ui';
 
 const App = () => (
   <div>
@@ -115,6 +115,3 @@ const App = () => (
 | SelectedIcon                             | 选中图标 ✔️               |
 
 <br/>
-
-API 文档
-https://www.notion.so/guookai/solidoc-ase-component-lib-2222a3768b08408286397b96f7bf15fd
